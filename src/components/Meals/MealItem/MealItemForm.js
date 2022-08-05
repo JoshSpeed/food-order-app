@@ -4,13 +4,13 @@ import Input from '../../UI/Input'
 
 import styles from './MealItemForm.module.css'
 
-function MealItemForm() {
+function MealItemForm(props) {
   return (
     <form className={styles.form}>
       <Input
         label='Amount'
         input={{
-          id: 'amount',
+          id: 'amount_' + props.id,
           type: 'number',
           min: '1',
           max: '5',
